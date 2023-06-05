@@ -1,0 +1,10 @@
+:root {
+  --primary-color: #47da23;
+  --primary-font: "Inter", sans-serif;
+}
+body {
+  font-family: var(--primary-font);
+}
+link {
+  text-decoration: none;
+}
