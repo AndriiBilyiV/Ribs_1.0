@@ -17,32 +17,46 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header class="header container">
       <nav>
         <ul class="header-nav-list">
-          <li><a class="header-nav-item" href="">наша філософія</a></li>
-          <li><a class="header-nav-item" href="">реберця</a></li>
-          <li><a class="header-nav-item" href="">як ми працюєм</a></li>
-          <li><a class="header-nav-item" href="">акції</a></li>
+          <li><a class="header-nav-item link" href="">наша філософія</a></li>
+          <li><a class="header-nav-item link" href="">реберця</a></li>
+          <li><a class="header-nav-item link" href="">як ми працюєм</a></li>
+          <li><a class="header-nav-item link" href="">акції</a></li>
         </ul>
       </nav>
-      <button type="button">хочу реберця</button>
+      <button type="button" class="iwant-btn btn">хочу реберця</button>
+      <div class="hero-bgr"></div>
+      <div class="header-gradient-thumb">
+        <div class="header-bgr"></div>
+      </div>
     </header>
     <section class="hero-container container">
-      <p>Домашня кухня з максимальною користю</p>
-      <h1>У будь-якій незрозумілій ситуації треба гарненько поїсти</h1>
+      <p class="hero-txt">Домашня кухня з максимальною користю</p>
+      <h1 class="hero-title">
+        У будь-якій незрозумілій ситуації
+        <span class="hero-title-span"
+          >треба <br />
+          гарненько поїсти</span
+        >
+      </h1>
       <div>
-        <button type="button">хочу реберця</button
-        ><button type="button">подзвоніть мені</button>
+        <button type="button" class="iwant-btn btn">хочу реберця</button
+        ><button type="button" class="call-me-btn btn">подзвоніть мені</button>
       </div>
       <div>
-        <strong><span>-30%</span> на перше замовлення</strong>
+        <strong class="first-order-round"
+          ><span class="percent">-30%</span> на перше замовлення</strong
+        >
       </div>
-      <div class="hero-bgr"></div>
-      <div class="header-bgr"></div>
     </section>
   </body>
 </html>
