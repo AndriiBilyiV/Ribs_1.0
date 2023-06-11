@@ -3,6 +3,7 @@
   --primary-color: #47da23;
   --black-color: #000;
   --white-color: #fff;
+  --gark-bgr-color: #1b1b1b;
 }
 
 /* General */
@@ -55,13 +56,24 @@ button {
   margin-left: 240px;
 }
 .header-nav-item {
+  padding: 20px 0;
+  display: block;
   font-weight: 900;
   font-size: 16px;
   line-height: 19px;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--white-color);
+  transition: transform 250ms cubic-bezier(0.23, -0.45, 0.45, 2);
 }
+.header-nav-item:hover,
+.header-nav-item:focus {
+  transform: translateY(-8px);
+  text-shadow: rgba(71, 218, 35, 0.5) 0px 10px 10px;
+  transition: transform 250ms cubic-bezier(0.23, -0.45, 0.45, 2),
+    text-shadow 100ms linear;
+}
+
 .hero-bgr {
   pointer-events: none;
   position: absolute;
@@ -86,7 +98,7 @@ button {
 @media (min-device-pixel-ratio: 2),
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
-  .hero-section {
+  .hero-bgr {
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
@@ -121,6 +133,7 @@ button {
   padding-top: 120px;
   padding-left: 700px;
   position: relative;
+  height: 783px;
 }
 .iwant-btn {
   font-weight: 900;
@@ -131,6 +144,16 @@ button {
 
   color: var(--black-color);
   padding: 12px 32px;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.iwant-btn:hover,
+.iwant-btn:focus {
+  box-shadow: rgba(71, 218, 35, 0.25) 0px 18px 38px,
+    rgba(71, 218, 35, 0.22) 0px 10px 10px;
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .hero-txt {
   font-weight: 700;
@@ -162,6 +185,17 @@ button {
   padding: 12px 16px;
   border: 1px solid var(--white-color);
   margin-left: 24px;
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.call-me-btn:hover,
+.call-me-btn:focus {
+  box-shadow: rgba(71, 218, 35, 0.25) 0px 18px 38px,
+    rgba(71, 218, 35, 0.22) 0px 10px 10px;
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .first-order-round {
   position: absolute;
@@ -186,4 +220,84 @@ button {
 .percent {
   font-size: 76px;
   line-height: 80px;
+}
+.phylosofy-section {
+  display: flex;
+  gap: 0;
+
+  background-color: var(--gark-bgr-color);
+}
+.phylosofy-left-par {
+  position: relative;
+  padding-top: 68px;
+  padding-left: 100px;
+}
+.section-title {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 39px;
+  text-transform: uppercase;
+  color: var(--white-color);
+  margin-bottom: 28px;
+}
+.phylosofy-section .section-title::after {
+  content: "";
+  display: block;
+  width: 600px;
+  height: 2px;
+  background-color: var(--primary-color);
+  margin-top: 15px;
+}
+.section-txt-thumb {
+  padding-left: 50px;
+}
+.section-semi-title {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  margin-bottom: 8px;
+  color: var(--primary-color);
+}
+.section-txt {
+  display: block;
+  max-width: 420px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: var(--white-color);
+  margin-bottom: 60px;
+}
+.phylosofy-section .section-txt:last-of-type {
+  max-width: 370px;
+}
+.plylosofy-img-thumb {
+  position: relative;
+  width: 750px;
+  margin-left: auto;
+}
+.green-decorate {
+  width: 35px;
+  height: 12px;
+  background-color: var(--primary-color);
+  position: absolute;
+  left: 0;
+  top: 112px;
+}
+@keyframes roundRotate {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.round-anim {
+  position: absolute;
+  top: 460px;
+  left: 480px;
+  fill: var(--primary-color);
+  animation-name: roundRotate;
+  animation-timing-function: linear;
+  animation-duration: 10000ms;
+  animation-iteration-count: infinite;
 }
