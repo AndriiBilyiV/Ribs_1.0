@@ -46,7 +46,7 @@ button {
   position: relative;
   display: flex;
   gap: 180px;
-  padding: 48px 60px;
+  padding: 44px 60px;
   align-items: center;
   justify-content: space-between;
 }
